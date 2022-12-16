@@ -1,0 +1,59 @@
+* {
+    font-family: 'ProximaNova';
+}
+
+body {
+    background-color: #fef6e4;
+}
+
+h1, h2 {
+    color: #001858;
+}
+
+label, output, .password-container, .generate-button {
+    color: #172c66;
+}
+
+.password-container, .strong-bar {
+    border-color: #001858;
+}
+
+.password-container, .generate-button, .slider-range, .slider-range::-webkit-slider-thumb {
+    border-radius: 3px;
+}
+
+.copy-icon, #copy-button {
+    width: 64px;
+    height: 64px;
+}
+
+.copy-icon {
+    background: url(../img/copy-icon.svg) no-repeat;
+}
+
+#strong {
+    transition: width transform .5s linear;
+    transition: background-color .5s ease-in-out;
+}
+
+.generate-button {
+    background-color: #f582ae;
+    font-weight: 700;
+}
+
+.slider-range, .slider-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #001858;
+}
+
+.slider-range {
+    height: 7px;
+}
+
+.slider-range::-webkit-slider-thumb {
+    height: 30px;
+    width: 7px;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out; 
+}

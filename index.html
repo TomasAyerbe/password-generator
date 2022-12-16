@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Password generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="flex flex-col items-center h-screen p-2 sm:p-4">
+        <h1 class="my-4 2xl:my-24 text-7xl 2xl:text-9xl text-center">Password generator</h1>
+        <div class="w-full md:w-3/4 xl:w-1/2 flex flex-col p-2 sm:p-4">
+            <div class="w-full flex justify-center items-center">
+                <div class="password-container flex items-center w-10/12 h-16 m-4 2xl:m-4 p-2 sm:p-4 border-2 border-solid shadow hover:shadow-lg duration-500">
+                    <span id="password-text" class="password-text break-all"></span>
+                </div>
+                <span class="copy-icon hover:drop-shadow-lg duration-500 hover:cursor-pointer"><button id="copy-button"></button></span>
+            </div>
+            <div class="w-full flex justify-center items-center m-2 2xl:m-4">
+                <div class="strong-bar w-2/3 h-4 border-2 border-solid">
+                    <div id="strong" class="h-3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center items-center m-2">
+            <button class="generate-button p-2 sm:p-4 text-xl shadow hover:shadow-lg duration-500 focus:outline-none">Generate random password</button>
+        </div>
+        <div class="w-full md:w-3/4 xl:w-1/2 p-2 sm:p-4">
+            <h2 class="text-2xl sm:text-4xl 2xl:text-5xl">Settings</h2>
+            <div class="flex justify-center items-center my-10 mx-4">
+                <label for="password-length" class="text-2xl 2xl:text-3xl mx-4">Length</label>
+                <input type="range" value="12" min="4" max="64" name="password-length" class="slider-range w-full focus:outline-none" oninput="rangevalue.value=value">
+                <output id="rangevalue" class="text-2xl 2xl:text-3xl w-10 sm:w-12 mx-4">12</output>
+            </div>
+            <div class="flex justify-around items-center my-10 mx-4">
+                <div class="flex flex-col">
+                    <div class="flex items-center my-2 2xl:my-4">
+                        <input type="checkbox" name="password-uppercase" class="w-5 h-5 hover:drop-shadow-xl duration-500 cursor-pointer focus:outline-none" checked>
+                        <label for="password-uppercase" class="text-2xl 2xl:text-3xl mx-4">Uppercase</label>
+                    </div>
+                    <div class="flex items-center my-2 2xl:my-4">
+                        <input type="checkbox" name="password-lowercase" class="w-5 h-5 hover:drop-shadow-xl duration-500 cursor-pointer focus:outline-none" checked>
+                        <label for="password-lowercase" class="text-2xl 2xl:text-3xl mx-4">Lowercase</label>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="flex items-center my-2 2xl:my-4">
+                        <input type="checkbox" name="password-numbers" class="w-5 h-5 hover:drop-shadow-xl duration-500 cursor-pointer focus:outline-none" checked>
+                        <label for="password-numbers" class="text-2xl 2xl:text-3xl mx-4">Numbers</label>
+                    </div>
+                    <div class="flex items-center my-2 2xl:my-4">
+                        <input type="checkbox" name="password-symbols" class="w-5 h-5 hover:drop-shadow-xl duration-500 cursor-pointer focus:outline-none" checked>
+                        <label for="password-symbols" class="text-2xl 2xl:text-3xl mx-4">Symbols</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/copyToClipboard.js"></script>
+</body>
+</html>
